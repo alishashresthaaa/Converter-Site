@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=
+  , initial-scale=1.0">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+  <link rel="stylesheet" href="style.css">
+  <title>Conversion Site</title>
+</head>
+<body>
+  <!-- Starting of container -->
+  <div class="container">
+    <!-- Showcase Area -->
+    <header id="showcase">
+      <div class="showcase-bg">
+        <img src="img/bg.jpg" alt="">
+      </div>
+      <div class="content">
+      <h1>Welcome to Conversion Site</h1>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum eius distinctio, est quis quasi sunt!</p>
+      <a href="#boxes" class="btn">Convert Now</a>
+      </div>      
+    </header>
+    <!-- End of Showcase -->
+
+    <!-- Box Grids -->
+    <div id="boxes">      
+      <div class="box" id="mass">
+        <i class="far fa-weight-hanging fa-4x"></i>
+        <h3>Mass</h3>
+      </div>
+      <div class="box" id="length">
+        <i class="fal fa-ruler-horizontal fa-4x"></i>
+        <h3>Length</h3>
+      </div>
+      <div class="box" id="volume">
+        <i class="fal fa-cube fa-4x"></i>
+        <h3>volume</h3>
+      </div>
+      <div class="box" id="area">
+        <i class="fal fa-vector-square fa-4x"></i>
+        <h3>Area</h3>
+      </div>
+      <div class="box" id="temperature">
+        <i class="fal fa-thermometer-three-quarters fa-4x"></i>
+        <h3>Temp</h3>
+      </div>
+      <div class="box" id="currency">
+        <i class="fal fa-usd-circle fa-4x"></i>
+        <h3>Currency</h3>
+      </div>
+      <div class="box" id="speed">
+        <i class="fal fa-tachometer-fast fa-4x"></i>
+        <h3>Speed</h3>
+      </div>
+      <div class="box" id="time">
+        <i class="fal fa-clock fa-4x"></i>
+        <h3>Time</h3>
+      </div>
+    </div>  
+    <!-- End oF boxes  -->
+  </div>
+  <!-- End of container -->
+
+  <!-- Modal for Different Conversion -->
+  <!-- For mass -->
+  <div id="modal-mass" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="close">&times;</span>       
+           <h1>Mass Converter</h1>        
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="conversion-box">
+              <select class="from" id="mass-from">
+                <option selected disabled>From:</option>
+                <option value="kg">kg</option>
+                <option value="lb">lbs</option>                
+              </select>
+              <input type="number" name="input" id="mass-input">
+            </div>
+            <div class="conversion-box">
+              <select class="to" id="mass-to">
+                <option selected disabled>To:</option>
+                <option value="kg">kg</option>
+                <option value="lb">lbs</option>          
+              </select>
+              <input type="text" name="output" value="" id="mass-output" disabled placeholder="Output" >
+            </div>
+            <a href="#" class="convert-btn" onclick="calculateMass()">Convert</a>           
+          </form>
+        </div>
+      </div>
+    </div>
+
+  <!-- For length -->
+  <div id="modal-length" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close">&times;</span>       
+         <h1>Length Converter</h1>        
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="conversion-box">
+            <select class="from" id="length-from">
+              <option selected disabled>From:</option>
+              <option value="cm">cm</option>
+              <option value="in">in</option>                
+            </select>
+            <input type="number" name="input" id="length-input">
+          </div>
+          <div class="conversion-box">
+            <select class="to" id="length-to">
+              <option selected disabled>To:</option>
+              <option value="cm">cm</option>
+              <option value="in">in</option>          
+            </select>
+            <input type="text" name="output" value="" id="length-output" disabled placeholder="Output" >
+          </div>
+          <a href="#" class="convert-btn" onclick="calculateLength()">Convert</a>           
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- For volume -->
+  <div id="modal-volume" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close">&times;</span>       
+         <h1>Volume Converter</h1>        
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="conversion-box">
+            <select class="from" id="volume-from">
+              <option selected disabled>From:</option>
+              <option value="ltr">ltr</option>
+              <option value="ml">ml</option>                
+            </select>
+            <input type="number" name="input" id="volume-input">
+          </div>
+          <div class="conversion-box">
+            <select class="to" id="volume-to">
+              <option selected disabled>To:</option>
+              <option value="ltr">ltr</option>
+              <option value="ml">ml</option>          
+            </select>
+            <input type="text" name="output" value="" id="volume-output" disabled placeholder="Output" >
+          </div>
+          <a href="#" class="convert-btn" onclick="calculateVolume()">Convert</a>           
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- For Area -->
+  <div id="modal-area" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close">&times;</span>       
+         <h1>Area Converter</h1>        
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="conversion-box">
+            <select class="from" id="area-from">
+              <option selected disabled>From:</option>
+              <option value="m2">m&sup2;</option>
+              <option value="cm2">cm&sup2;</option>                
+            </select>
+            <input type="number" name="input" id="area-input">
+          </div>
+          <div class="conversion-box">
+            <select class="to" id="area-to">
+              <option selected disabled>To:</option>
+              <option value="m2">m&sup2;</option>
+              <option value="cm2">cm&sup2;</option>          
+            </select>
+            <input type="text" name="output" value="" id="area-output" disabled placeholder="Output" >
+          </div>
+          <a href="#" class="convert-btn" onclick="calculateArea()">Convert</a>           
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- For Temperature -->
+  <div id="modal-temperature" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close">&times;</span>       
+         <h1>Temperature Converter</h1>        
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="conversion-box">
+            <select class="from" id="temperature-from">
+              <option selected disabled>From:</option>
+              <option value="C">&deg;C</option>
+              <option value="F">&deg;F</option>                
+            </select>
+            <input type="number" name="input" id="temperature-input">
+          </div>
+          <div class="conversion-box">
+            <select class="to" id="temperature-to">
+              <option selected disabled>To:</option>
+              <option value="C">&deg;C</option>
+              <option value="F">&deg;F</option>          
+            </select>
+            <input type="text" name="output" value="" id="temperature-output" disabled placeholder="Output" >
+          </div>
+          <a href="#" class="convert-btn" onclick="calculateTemperature()">Convert</a>           
+        </form>
+      </div>
+    </div>
+  </div>
+  
+  <!-- For Currency -->
+  <div id="modal-currency" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close">&times;</span>       
+         <h1>Currency Converter</h1>        
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="conversion-box">
+            <select class="from" id="currency-from">
+              <option selected disabled>From:</option>
+              <option value="inr">INR</option>
+              <option value="nrs">NRS</option>                
+            </select>
+            <input type="number" name="input" id="currency-input">
+          </div>
+          <div class="conversion-box">
+            <select class="to" id="currency-to">
+              <option selected disabled>To:</option>
+              <option value="inr">INR</option>
+              <option value="nrs">NRS</option>          
+            </select>
+            <input type="text" name="output" value="" id="currency-output" disabled placeholder="Output" >
+          </div>
+          <a href="#" class="convert-btn" onclick="calculateCurrency()">Convert</a>           
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- For Speed -->
+  <div id="modal-speed" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close">&times;</span>       
+         <h1>Speed Converter</h1>        
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="conversion-box">
+            <select class="from" id="speed-from">
+              <option selected disabled>From:</option>
+              <option value="ms">m/s</option>
+              <option value="kms">km/s</option>                
+            </select>
+            <input type="number" name="input" id="speed-input">
+          </div>
+          <div class="conversion-box">
+            <select class="to" id="speed-to">
+              <option selected disabled>To:</option>
+              <option value="ms">m/s</option>
+              <option value="kms">km/s</option>          
+            </select>
+            <input type="text" name="output" value="" id="speed-output" disabled placeholder="Output" >
+          </div>
+          <a href="#" class="convert-btn" onclick="calculateSpeed()">Convert</a>           
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- For Time -->
+  <div id="modal-time" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close">&times;</span>       
+         <h1>Time Converter</h1>        
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="conversion-box">
+            <select class="from" id="time-from">
+              <option selected disabled>From:</option>
+              <option value="min">min</option>
+              <option value="sec">sec</option>                
+            </select>
+            <input type="number" name="input" id="time-input">
+          </div>
+          <div class="conversion-box">
+            <select class="to" id="time-to">
+              <option selected disabled>To:</option>
+              <option value="min">min</option>
+              <option value="sec">sec</option>          
+            </select>
+            <input type="text" name="output" value="" id="time-output" disabled placeholder="Output" >
+          </div>
+          <a href="#" class="convert-btn" onclick="calculateTime()">Convert</a>           
+        </form>
+      </div>
+    </div>
+  </div>
+  
+
+
+
+
+
+  <footer id="footer">
+    <p>Conversion Site &copy; 2021</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/mass.js"></script>
+  <script src="js/length.js"></script>
+  <script src="js/volume.js"></script>
+  <script src="js/area.js"></script>
+  <script src="js/temperature.js"></script>
+  <script src="js/currency.js"></script>
+  <script src="js/speed.js"></script>
+  <script src="js/time.js"></script>
+ 
+ 
+</body>
+</html>
